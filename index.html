@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script type="" src="script.js"></script> -->
+
+    <title>Scrolling website</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">LOGO</a>
+        <UL>
+            <li><a herf="#" class= "active">Home</a></li>
+            <li><a herf="#">About</a></li>
+            <li><a herf="#">Work</a></li>
+            <li><a herf="#">Contact</a></li>
+        </UL>
+    </header>
+
+    <section>
+        <img src="Images/stars.png" id="stars">
+        <img src="Images/moon.png" id="moon">
+        <img src="Images/mountains_behind.png" id="mountains_behind">
+        <img src="Images/mountains_front.png" id="mountains_front">
+        <H3 id="welcome_text">Welcome to My Moon World</H3>
+        <h1 id="text">Moon light</h1>
+        <a href="#txt" id="btn"><span></span>Explore</a>
+    </section>
+
+
+    <DIV class="content" id="txt">
+        <H1 id="welcome_text_content">Welcome to My Moon World</H1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet reprehenderit repudiandae rem perferendis vero mollitia deleniti nobis, debitis consequatur repellat, culpa soluta! Adipisci, nesciunt accusamus vitae consequatur sed asperiores corrupti aperiam ut eum maxime ea reprehenderit at voluptas, a sapiente aliquid? Quas aliquid vel sint facere debitis consequuntur, commodi aut temporibus quaerat quibusdam eveniet aspernatur sapiente rerum distinctio, ipsa quia libero officia fugiat. Ducimus officia corrupti eius sit hic voluptatem unde, nostrum quaerat ad quidem sint quod, totam, nisi qui magni velit dolor placeat facilis exercitationem! Voluptatum quisquam provident distinctio a assumenda eligendi sint rerum. Accusantium id aut, earum veniam sapiente magni voluptate voluptates perspiciatis?<br> <br>A possimus deleniti quas deserunt, incidunt excepturi mollitia laborum facilis sunt, quos autem perspiciatis consectetur? Perferendis iusto veniam tempora corporis deserunt voluptates sapiente alias eligendi illo iste temporibus praesentium ex qui neque harum veritatis reprehenderit culpa, consequatur amet necessitatibus nihil! Eligendi laboriosam ipsum eum quae accusantium iure laborum, explicabo dignissimos quia numquam, aliquam ipsam voluptatem dolore quas libero cumque modi distinctio aperiam perferendis! Qui commodi, non nam facere itaque omnis. Veniam dolor cumque ducimus sint fuga perspiciatis aut dolorum eveniet. Nisi, quidem ipsum possimus repellendus architecto corrupti animi rerum nesciunt dolorum incidunt tenetur voluptate, optio eaque omnis dolore deserunt, deleniti modi voluptatibus dolores. Dignissimos, qui sint? Laborum nostrum vitae enim molestias ad illo sint ipsum numquam inventore totam dignissimos, itaque mollitia dicta ducimus quibusdam error voluptatem dolorum, ipsa dolore rem ipsam! Mollitia ab repudiandae.<br><br> Perferendis earum unde totam cupiditate officiis non, eaque eveniet! Accusantium ipsam cum ut? Impedit perferendis aliquam vitae aspernatur velit quibusdam excepturi eius ab laboriosam natus ullam esse totam, corporis tempora ipsum consectetur sapiente magni iusto praesentium tempore et voluptas placeat earum. Repudiandae itaque veritatis sed enim quidem. Repudiandae doloribus incidunt odio maiores non. Sequi, explicabo. Architecto mollitia suscipit praesentium, blanditiis dolorem nesciunt quis. Cumque, minima et! Maxime non corrupti quod veniam quis nostrum repudiandae ad praesentium placeat harum in corporis fugiat ipsum quam excepturi cumque nobis aliquam reprehenderit sequi magnam, nam repellendus. Aliquam, consequatur beatae at quas enim harum minima ipsam voluptatem deserunt odio iure sint in aspernatur rerum quasi facere reiciendis tempora nulla corporis voluptatibus accusamus quo? Aspernatur quia rerum esse asperiores facere? Unde totam explicabo repudiandae, dolore eaque aliquam corrupti. Sed ducimus voluptatem sequi totam repudiandae ex saepe, labore minima debitis non quisquam corporis officia! Omnis fugit veniam dolor vitae nihil tempore distinctio. <br><br>Tempore nulla eaque iure et aut laborum ipsa veniam quisquam ducimus maiores recusandae optio fugiat ut molestiae similique reiciendis hic neque expedita, quibusdam eius corporis rem. Voluptas, cupiditate veritatis iure reiciendis excepturi atque eos deleniti libero. Laborum, earum. Illum illo labore praesentium, dicta tempora fugit sunt, id nesciunt ipsum delectus, ducimus possimus modi rerum aperiam officia ratione quas ex officiis sed. Ex velit, nam esse amet unde at omnis fugiat, veniam voluptatibus qui dolore debitis quia, quo aspernatur. Voluptatibus mollitia praesentium culpa dolore! Officiis ducimus culpa doloremque quibusdam animi error qui possimus suscipit iste alias, aut laudantium iure tempora explicabo inventore soluta eius assumenda voluptates odit?</p>
+
+    </DIV>
+
+    <!-- <footer>
+        <div class="foot">
+
+        </div>
+    </footer> -->
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let txt = document.getElementById('txt');
+        let btn = document.getElementById('btn');
+        let welcome_text = document.getElementById('welcome_text');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25+ 'px';
+            moon.style.top = value  * 1.5 + 'px';
+         
+            mountains_behind.style.top = value *  0.5 + 'px';
+            mountains_front.style.top = value *  0 + 'px';
+            
+            text.style.right  = value  * 1.75 + 'px';
+
+            btn.style.top = value  * 1.5 + 'px';
+        })
+    </script>
+
+
+</body>
+</html>
